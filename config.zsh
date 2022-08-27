@@ -2,10 +2,10 @@
 # the following snippet at the end of your
 # .zshrc
 # 
-# CONFIGZSH={path/to/this/file}
+# CONFIG={path/to/this/file}
 # 
-# if [[ -f $CONFIGZSH ]]; then
-#   source $CONFIGZSH
+# if [[ -f $CONFIG ]]; then
+#   source $CONFIG
 # fi
 
 # Set nvim as default editor
