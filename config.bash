@@ -8,10 +8,13 @@
 #   source $CONFIG
 # fi
 
+alias ga='git add'
 alias gaa='git add -A'
 alias gc='git commit -v'
 alias gcmsg='git commit -m'
 alias gcn!='git commit --amend --no-edit'
+alias glo='git log --one-line'
+alias glog='git log --graph --pretty --decorate=full'
 alias gp='git push'
 alias gss='git status -s'
 alias gst='git status'
