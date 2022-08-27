@@ -8,12 +8,21 @@
 #   source $CONFIG
 # fi
 
+alias gaa='git add -A'
+alias gc='git commit -v'
+alias gcmsg='git commit -m'
+alias gcn!='git commit --amend --no-edit'
+alias gp='git push'
+alias gss='git status -s'
+alias gst='git status'
+alias vim='nvim'
+
 # Set default editor
 export EDITOR='nvim'
 export VISUAL='nvim'
 
 # Show git branch in shell prompt
-GIT_PROMPT=git-prompt.sh
+GIT_PROMPT=~/.dotfiles/git-prompt.sh
 
 source $GIT_PROMPT
 
