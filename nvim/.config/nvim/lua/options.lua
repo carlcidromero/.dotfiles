@@ -18,7 +18,6 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.isfname:append("@-@")
 vim.opt.laststatus = 2
-vim.opt.linebreak = false
 vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.path:append("**")
@@ -35,7 +34,6 @@ vim.opt.softtabstop = 2
 vim.opt.swapfile = false
 vim.opt.tabstop = 2
 vim.opt.termguicolors = true
-vim.opt.textwidth = 80
 vim.opt.timeoutlen = 250
 vim.opt.undofile = true
 vim.opt.updatetime = 50
