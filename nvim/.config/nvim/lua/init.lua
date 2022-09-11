@@ -26,7 +26,7 @@ command = 'Neoformat',
 vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = true })
 vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = true })
 
-vim.cmd 'colorscheme vim-monokai-tasty'
+vim.cmd 'colorscheme catppuccin_mocha'
 
 vim.g.mapleader = '"'
 vim.g.neoformat_try_node_exe = 1

@@ -18,7 +18,7 @@ vim.opt.ignorecase = true
 vim.opt.incsearch = true
 vim.opt.isfname:append("@-@")
 vim.opt.laststatus = 2
--- vim.opt.linebreak = true
+vim.opt.linebreak = false
 vim.opt.mouse = 'a'
 vim.opt.number = true
 vim.opt.path:append("**")

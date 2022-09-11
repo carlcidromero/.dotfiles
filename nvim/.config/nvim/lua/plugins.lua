@@ -11,8 +11,7 @@ return require('packer').startup(function()
   use 'sbdchd/neoformat'
 
   -- colorschemes
-  use 'patstockwell/vim-monokai-tasty'
-  use 'jacoborus/tender.vim'
+  use 'catppuccin/vim'
 
   -- fuzzy find
   use { 'junegunn/fzf', run = ':call fzf#install()' }
