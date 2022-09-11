@@ -1,9 +1,15 @@
 nix-env -iA \
+# .dotfiles stuff
+  nixpkgs.stow \
+# bat for prettier cat
   nixpkgs.bat \
-  nixpkgs.gh \
-  nixpkgs.git \
+# ide
   nixpkgs.neovim \
   nixpkgs.nodejs \
   nixpkgs.nodePackages.npm \
-  nixpkgs.stow \
-  nixpkgs.zsh
+# shell
+  nixpkgs.tmux \
+  nixpkgs.zsh \
+# version control
+  nixpkgs.gh \
+  nixpkgs.git
