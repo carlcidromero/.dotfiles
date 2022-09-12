@@ -7,6 +7,7 @@ nix-env -iA \
   nixpkgs.neovim \
   nixpkgs.nodejs \
   nixpkgs.nodePackages.npm \
+  nixpkgs.xclip \
 # shell
   nixpkgs.tmux \
   nixpkgs.zsh \
