@@ -7,3 +7,18 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # alias vim to nvim
 echo "# alias vim to nvim" >> ~/.zshrc
 echo "alias vim='nvim'" >> ~/.zshrc
+
+# set custom theme
+ZSHRC=~/.zshrc
+DEFAULT_THEME="ZSH_THEME=\"robbyrussell\""
+NEW_THEME="ZSH_THEME=\"refined\""
+
+if test -f $ZSHRC; then
+  echo "setting new theme..."
+    sed -i "s/$DEFAULT_THEME/$NEW_THEME/" $ZSHRC
+      echo "new theme has been set!"
+    else
+      echo "failed!"
+fi
+
+
