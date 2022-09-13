@@ -7,6 +7,8 @@ This repository contains files that allow for a streamlined setup of a reproduci
 3. Clone `this` repository.
 4. Execute `bootstrap-nix-env.sh`.
 
+The key pieces of technology to this solution are [Git](https://git-scm.com/), [Nix](https://nixos.org) and [GNU Stow](https://www.gnu.org/software/stow/).
+
 ## Usage
 
 ### Local Environment Setup
