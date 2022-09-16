@@ -11,12 +11,34 @@ The key pieces of technology to this solution are [Git](https://git-scm.com/), [
 
 ## Design Philosphy
 
-1. Command (line) and conquer! The terminal is an ally that will provide familiarity and consistency across operating systems.
-2. Shebang, shebang! Bash scripts produce reproducible productivity.
-3. Bloat? Where! Swiftly rid of bloat-- swiftly reacquire if it is missed.
+### 1. Command (line) and conquer!
+
+The terminal is an ally that will provide familiarity and consistency across operating systems.
+
+### 2. Shebang, shebang!
+
+Bash scripts produce reproducible productivity.
+
+### 3. Bloat? Where!
+
+Swiftly rid of bloat-- swiftly reacquire if it is missed.
 
 ## Usage
 
 ### Local Environment Setup
+
+#### macOS
+
+##### Install [Homebrew](https://brew.sh/)
+
+`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+
+##### Install gh (GitHub CLI)
+
+`brew install gh`
+
+##### Install Firefox
+
+`brew install --cask firefox`
 
 ### Nix Environment Setup
