@@ -9,7 +9,7 @@ This repository contains files that allow for a streamlined setup of a reproduci
 
 The key pieces of technology to this solution are [Git](https://git-scm.com/), [Nix](https://nixos.org) and [GNU Stow](https://www.gnu.org/software/stow/).
 
-## Design Philosphy
+## Design Philosophy
 
 ### 1. Command (line) and conquer!
 
@@ -33,12 +33,16 @@ Swiftly rid of bloat-- swiftly reacquire if it is missed.
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-##### Install gh (GitHub CLI)
+##### Install [gh (GitHub CLI)](https://cli.github.com/)
 
 `brew install gh`
 
 ##### Install Firefox
 
 `brew install --cask firefox`
+
+##### Install Google Drive
+
+`brew install google-drive`
 
 ### Nix Environment Setup
