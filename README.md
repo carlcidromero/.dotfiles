@@ -23,6 +23,10 @@ Bash scripts produce reproducible productivity.
 
 Swiftly rid of bloat-- swiftly reacquire if it is missed.
 
+### 4. Oust the mouse!
+
+Home (row) is where the heart is.
+
 ## Usage
 
 ### Local Environment Setup
