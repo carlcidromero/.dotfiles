@@ -45,4 +45,8 @@ Swiftly rid of bloat-- swiftly reacquire if it is missed.
 
 `brew install google-drive`
 
+##### Install [Amethyst](https://ianyh.com/amethyst/)
+
+`brew install --cask amethyst`
+
 ### Nix Environment Setup
