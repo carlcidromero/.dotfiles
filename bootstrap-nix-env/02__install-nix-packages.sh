@@ -11,6 +11,3 @@ nix-env -iA \
 # shell
   nixpkgs.tmux \
   nixpkgs.zsh \
-# version control
-  nixpkgs.gh \
-  nixpkgs.git
