@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # add zsh as valid shell
 command -v zsh | sudo tee -a /etc/shells
 
@@ -15,10 +17,9 @@ NEW_THEME="ZSH_THEME=\"refined\""
 
 if test -f $ZSHRC; then
   echo "setting new theme..."
-    sed -i "s/$DEFAULT_THEME/$NEW_THEME/" $ZSHRC
+    sed -i'' -e "s/$DEFAULT_THEME/$NEW_THEME/" $ZSHRC
       echo "new theme has been set!"
     else
       echo "failed!"
 fi
-
 
