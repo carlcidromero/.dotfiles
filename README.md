@@ -53,4 +53,8 @@ Home (row) is where the heart is.
 
 `brew install --cask amethyst`
 
+##### Install [GnuPG](https://www.gnupg.org/download/)
+
+`brew install gpg`
+
 ### Nix Environment Setup
