@@ -1,13 +1,17 @@
-nix-env -iA \
-# .dotfiles stuff
-  nixpkgs.stow \
+#!/bin/bash
+
+# .dotfiles file management
+nix-env -iA nixpkgs.stow
+
 # bat for prettier cat
-  nixpkgs.bat \
+nix-env -iA nixpkgs.bat
+
 # ide
-  nixpkgs.neovim \
-  nixpkgs.nodejs \
-  nixpkgs.nodePackages.npm \
-  nixpkgs.xclip \
+nix-env -iA nixpkgs.neovim
+nix-env -iA nixpkgs.nodejs
+nix-env -iA nixpkgs.nodePackages.npm
+nix-env -iA nixpkgs.xclip
+
 # shell
-  nixpkgs.tmux \
-  nixpkgs.zsh \
+nix-env -iA nixpkgs.tmux
+nix-env -iA nixpkgs.zsh
