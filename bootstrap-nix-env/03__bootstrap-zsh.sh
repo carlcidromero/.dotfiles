@@ -10,6 +10,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo "# alias vim to nvim" >> ~/.zshrc
 echo "alias vim='nvim'" >> ~/.zshrc
 
+# set gpg_tty for gpg signing
+echo "GPG_TTY=$(tty)" >> ~/.zshrc
+echo "export GPG_TTY" >> ~/.zshrc
+
 # set custom theme
 ZSHRC=~/.zshrc
 DEFAULT_THEME="ZSH_THEME=\"robbyrussell\""
@@ -22,4 +26,3 @@ if test -f $ZSHRC; then
     else
       echo "failed!"
 fi
-
