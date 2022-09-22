@@ -13,5 +13,4 @@ nix-env -iA nixpkgs.nodePackages.npm
 nix-env -iA nixpkgs.xclip
 
 # shell
-nix-env -iA nixpkgs.tmux
 nix-env -iA nixpkgs.zsh
