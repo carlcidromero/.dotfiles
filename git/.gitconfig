@@ -2,7 +2,7 @@
 [user]
 	name = cid
 	email = carlcidromero@gmail.com
-	signingkey = 900C6C3D27C7A6DD0C88EB6BF4E512BE1F3C2477
+	signingkey = 95A4B4664C9CFD24411DD2E4E970FB5F82EDAE3B
 [commit]
 	gpgsign = true
 [core]
