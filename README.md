@@ -57,4 +57,8 @@ Home (row) is where the heart is.
 
 `brew install gpg`
 
+##### Install [iTerm2](https://iterm2.com)
+
+`brew install iterm2`
+
 ### Nix Environment Setup
