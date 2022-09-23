@@ -11,7 +11,7 @@ return require('packer').startup(function()
   use 'sbdchd/neoformat'
 
   -- colorschemes
-  use 'catppuccin/vim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
 
   -- fuzzy find
   use { 'junegunn/fzf', run = ':call fzf#install()' }
