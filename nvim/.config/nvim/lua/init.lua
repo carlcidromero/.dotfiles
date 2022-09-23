@@ -26,7 +26,9 @@ command = 'Neoformat',
 vim.api.nvim_set_keymap("i", "jk", "<ESC>", { noremap = true })
 vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = true })
 
-vim.cmd 'colorscheme catppuccin_mocha'
+vim.g.catppuccin_flavour = 'mocha' -- latte, frappe, macchiato, mocha
+require('catppuccin').setup()
+vim.cmd [[colorscheme catppuccin]]
 
 vim.g.mapleader = '"'
 vim.g.neoformat_try_node_exe = 1
