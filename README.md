@@ -33,6 +33,8 @@ Home (row) is where the heart is.
 
 #### macOS
 
+Before I started this project, I thought I was a big fan of macOS. I'm not.
+
 ##### Install [Homebrew](https://brew.sh/)
 
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
