@@ -20,7 +20,7 @@ return require('packer').startup(function()
   use 'airblade/vim-gitgutter'
 
   -- language server hosting
-  use {'neoclide/coc.nvim', branch = 'release'}
+  use { 'neoclide/coc.nvim', branch = 'release' }
 
   -- syntax highlighting
   use 'sheerun/vim-polyglot'
