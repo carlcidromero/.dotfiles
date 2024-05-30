@@ -1,0 +1,10 @@
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -l'
+alias lla='ls -lA'
+
+PROMPT_COMMAND="date"
+
+set -o vi
+bind '"jk"':vi-movement-mode
+bind '"kj"':vi-movement-mode

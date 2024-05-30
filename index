@@ -1,0 +1,12 @@
+files=( bash-config git-aliases homebrew-aliases )
+for x in ${files[@]}
+do
+  source "$HOME/.dotfiles/$x"
+done
+
+dotfiles=( .inputrc .vimrc )
+
+for x in ${dotfiles[@]}
+do
+  cp "$HOME/.dotfiles/$x" "$HOME/$x"
+done
