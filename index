@@ -4,7 +4,7 @@ do
   source "$HOME/.dotfiles/$x"
 done
 
-dotfiles=( .inputrc .vimrc )
+dotfiles=( .inputrc .vimrc .minttyrc )
 
 for x in ${dotfiles[@]}
 do

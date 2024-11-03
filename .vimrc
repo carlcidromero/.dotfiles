@@ -1,5 +1,5 @@
-"inoremap jk <Esc>
-"inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 set expandtab
 set mouse=a

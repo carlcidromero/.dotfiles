@@ -1,0 +1,8 @@
+FontHeight=16
+CursorType=block
+CursorBlinks=no
+Font=Consolas
+ForegroundColour=0,255,0
+RewrapOnResize=yes
+ThemeFile=
+Transparency=medium

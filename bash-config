@@ -6,5 +6,5 @@ alias lla='ls -lA'
 PROMPT_COMMAND="date"
 
 set -o vi
-#bind '"jk"':vi-movement-mode
-#bind '"kj"':vi-movement-mode
+bind '"jk"':vi-movement-mode
+bind '"kj"':vi-movement-mode
