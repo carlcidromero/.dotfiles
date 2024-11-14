@@ -4,5 +4,5 @@ CursorBlinks=no
 Font=Consolas
 ForegroundColour=0,255,0
 RewrapOnResize=yes
-ThemeFile=
+ThemeFile=monokai-dimmed
 Transparency=medium
