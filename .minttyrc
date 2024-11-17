@@ -1,8 +1,7 @@
-FontHeight=16
+FontHeight=18
 CursorType=block
 CursorBlinks=no
 Font=Consolas
-ForegroundColour=0,255,0
 RewrapOnResize=yes
-ThemeFile=monokai-dimmed
+ThemeFile=rosipov
 Transparency=medium
