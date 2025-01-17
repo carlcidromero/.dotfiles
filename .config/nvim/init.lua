@@ -16,14 +16,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-	{'folke/tokyonight.nvim'},
+	{'lunarvim/darkplus.nvim'},
 	{'neovim/nvim-lspconfig'},
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
 })
 
 vim.opt.termguicolors = true
-vim.cmd.colorscheme('tokyonight')
+vim.cmd.colorscheme('darkplus')
 
 -- Reserve a space in the gutter
 -- This will avoid an annoying layout shift in the screen
