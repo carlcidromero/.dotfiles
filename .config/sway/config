@@ -230,4 +230,6 @@ bar {
     }
 }
 
+exec wl-paste -t text --watch clipman store --no-persist
+
 include /etc/sway/config.d/*
