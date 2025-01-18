@@ -1,15 +1,7 @@
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
-vim.opt.cursorline = true
-vim.opt.expandtab = true
-vim.opt.linebreak = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.scrolloff = 999
-vim.opt.timeoutlen = 250
-
-vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
-vim.keymap.set('i', 'kj', '<Esc>', { noremap = true, silent = true })
+require("config.options")
+require("config.keymaps")
 
 if not vim.uv.fs_stat(lazypath) then
 	print('Installing lazy.nvim...')
@@ -36,10 +28,6 @@ require('lazy').setup({
 
 vim.opt.termguicolors = true
 vim.cmd.colorscheme('darkplus')
-
--- Reserve a space in the gutter
--- This will avoid an annoying layout shift in the screen
-vim.opt.signcolumn = 'yes'
 
 -- Add cmp_nvim_lsp capabilities settings to lspconfig
 -- This should be executed before you configure any language server
