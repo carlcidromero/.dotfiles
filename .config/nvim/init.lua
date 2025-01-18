@@ -1,5 +1,16 @@
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.linebreak = true
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 999
+vim.opt.timeoutlen = 250
+
+vim.keymap.set('i', 'jk', '<Esc>', { noremap = true, silent = true })
+vim.keymap.set('i', 'kj', '<Esc>', { noremap = true, silent = true })
+
 if not vim.uv.fs_stat(lazypath) then
 	print('Installing lazy.nvim...')
 	vim.fn.system({
@@ -20,6 +31,7 @@ require('lazy').setup({
 	{'neovim/nvim-lspconfig'},
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
+	{'prettier/vim-prettier'},
 })
 
 vim.opt.termguicolors = true
@@ -59,3 +71,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 require('lspconfig').ts_ls.setup({})
+
+vim.g['prettier#autoformat'] = 1
+vim.g['prettier#autoformat_require_pragma'] = 0
