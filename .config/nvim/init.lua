@@ -4,26 +4,26 @@ require("config.options")
 require("config.keymaps")
 
 if not vim.uv.fs_stat(lazypath) then
-	print('Installing lazy.nvim...')
-	vim.fn.system({
-		'git',
-		'clone',
-		'--filter=blob:none',
-		'git@github.com:folke/lazy.nvim.git',
-		'--branch=stable',
-		lazypath,
-	})
-	print('Done.')
+    print('Installing lazy.nvim...')
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'git@github.com:folke/lazy.nvim.git',
+        '--branch=stable',
+        lazypath,
+    })
+    print('Done.')
 end
 
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-	{'lunarvim/darkplus.nvim'},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
-	{'prettier/vim-prettier'},
+    {'lunarvim/darkplus.nvim'},
+    {'neovim/nvim-lspconfig'},
+    {'hrsh7th/cmp-nvim-lsp'},
+    {'hrsh7th/nvim-cmp'},
+    {'prettier/vim-prettier'},
 })
 
 vim.opt.termguicolors = true
@@ -33,16 +33,16 @@ vim.cmd.colorscheme('darkplus')
 -- This should be executed before you configure any language server
 local lspconfig_defaults = require('lspconfig').util.default_config
 lspconfig_defaults.capabilities = vim.tbl_deep_extend(
-  'force',
-  lspconfig_defaults.capabilities,
-  require('cmp_nvim_lsp').default_capabilities()
+    'force',
+    lspconfig_defaults.capabilities,
+    require('cmp_nvim_lsp').default_capabilities()
 )
 
 -- This is where you enable features that only work
 -- if there is a language server active in the file
 vim.api.nvim_create_autocmd('LspAttach', {
-  desc = 'LSP actions',
-  callback = function(event)
+    desc = 'LSP actions',
+    callback = function(event)
     local opts = {buffer = event.buf}
 
     vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
@@ -55,10 +55,35 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
-  end,
+    end,
 })
 
 require('lspconfig').ts_ls.setup({})
 
 vim.g['prettier#autoformat'] = 1
 vim.g['prettier#autoformat_require_pragma'] = 0
+
+local cmp = require('cmp')
+
+cmp.setup({
+    sources = {
+        {name = 'nvim_lsp'},
+    },
+    mapping = cmp.mapping.preset.insert({
+        -- Navigate between completion items
+        ['<C-p>'] = cmp.mapping.select_prev_item({behavior = 'select'}),
+        ['<C-n>'] = cmp.mapping.select_next_item({behavior = 'select'}),
+        -- `Enter` key to confirm completion
+        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        -- Ctrl+Space to trigger completion menu
+        ['<C-Space>'] = cmp.mapping.complete(),
+        -- Scroll up and down in the completion documentation
+        ['<C-u>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-d>'] = cmp.mapping.scroll_docs(4),jk
+    }),
+    snippet = {
+        expand = function(args)
+        vim.snippet.expand(args.body)
+        end,
+    },
+})
