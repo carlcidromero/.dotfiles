@@ -5,6 +5,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 999
 vim.opt.shiftwidth = 4
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
+vim.opt.termguicolors = true
 vim.opt.timeoutlen = 250
     
