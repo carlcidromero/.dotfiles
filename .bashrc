@@ -17,6 +17,3 @@ alias vim=nvim
 export BROWSER=firefox
 export EDITOR=nvim
 
-if [ -z "$TMUX" ]; then
-  tmux
-fi
