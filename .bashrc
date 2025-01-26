@@ -7,7 +7,10 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+
+source "$HOME/.config/bash/prompts/git/git-prompt.sh"
+
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 source "$HOME/.config/bash/aliases/filesystem"
 source "$HOME/.config/bash/aliases/git"
