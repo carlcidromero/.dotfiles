@@ -17,6 +17,9 @@ source "$HOME/.config/bash/aliases/git"
 
 alias vim=nvim
 
-export BROWSER=firefox
+export BROWSER=brave
 export EDITOR=nvim
 
+if [ -z "$TMUX" ]; then
+  tmux
+fi
