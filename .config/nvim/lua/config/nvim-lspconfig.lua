@@ -27,3 +27,4 @@ vim.api.nvim_create_autocmd("LspAttach", {
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true })
 
 require("lspconfig").ts_ls.setup({})
+require("lspconfig").html.setup({})
