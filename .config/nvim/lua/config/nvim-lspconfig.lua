@@ -28,3 +28,4 @@ vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, si
 
 require("lspconfig").ts_ls.setup({})
 require("lspconfig").html.setup({})
+require("lspconfig").pyright.setup({})
