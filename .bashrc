@@ -10,7 +10,7 @@ alias grep='grep --color=auto'
 
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
-source "$HOME/.config/bash/prompts/git/git-prompt.sh"
+source "$HOME/.config/bash/git-prompt.sh"
 
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
