@@ -26,6 +26,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true })
 
-require("lspconfig").ts_ls.setup({})
-require("lspconfig").html.setup({})
-require("lspconfig").pyright.setup({})
+require("mason").setup({})
+require("mason-lspconfig").setup({
+    handlers = {
+        function(server_name)
+            require("lspconfig")[server_name].setup({})
+        end,
+    },
+})
