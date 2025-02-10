@@ -16,8 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {"williamboman/mason.nvim"},
-    {"williamboman/mason-lspconfig.nvim"},
+    { "folke/zen-mode.nvim" },
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
     { "hrsh7th/nvim-cmp" },
