@@ -18,6 +18,7 @@ alias vim=nvim
 
 export BROWSER=brave
 export EDITOR=nvim
+export GTEST_ROOT=$HOME/.local/src/googletest
 
 if [ -z "$TMUX" ]; then
   tmux
