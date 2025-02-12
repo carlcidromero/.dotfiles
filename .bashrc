@@ -23,3 +23,5 @@ export GTEST_ROOT=$HOME/.local/src/googletest
 if [ -z "$TMUX" ]; then
   tmux
 fi
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
