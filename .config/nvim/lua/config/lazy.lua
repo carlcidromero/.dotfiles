@@ -17,8 +17,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "bluz71/vim-moonfly-colors" },
-    { "folke/zen-mode.nvim" },
+    { "folke/zen-mode.nvim", opts = {
+        window = {
+            width = 80,
+        },
+    } },
+    { "airblade/vim-gitgutter" },
     { "williamboman/mason.nvim" },
+    { "tpope/vim-fugitive" },
     { "williamboman/mason-lspconfig.nvim" },
     { "neovim/nvim-lspconfig" },
     { "hrsh7th/cmp-nvim-lsp" },
