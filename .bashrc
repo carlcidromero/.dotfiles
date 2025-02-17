@@ -5,10 +5,16 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+git_path='/usr/bin/git'
+
+if [[ "$OSTYPE" == "msys" ]]; then
+  git_path='/mingw64/bin/git'
+fi
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias dotfiles="$git_path --git-dir=\"$HOME/.dotfiles/\" --work-tree=\"$HOME\""
 
 source "$HOME/.config/bash/git-prompt.sh"
 
@@ -20,8 +26,11 @@ export BROWSER=brave
 export EDITOR=nvim
 export GTEST_ROOT=$HOME/.local/src/googletest
 
-if [ -z "$TMUX" ]; then
-  tmux
+if [[ "$OSTYPE" != "msys" ]]; then
+  if [ -z "$TMUX" ]; then
+    tmux
+  fi
 fi
+
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
