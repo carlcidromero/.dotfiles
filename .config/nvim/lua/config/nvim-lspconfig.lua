@@ -24,6 +24,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = "●", -- can also be "", ">>", or any symbol
+        spacing = 2,
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false, -- show errors only after insert mode
+    severity_sort = true,
+})
+
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { noremap = true, silent = true })
 
 require("mason").setup({})

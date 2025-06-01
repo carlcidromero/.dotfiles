@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "bluz71/vim-moonfly-colors" },
+    { "ficcdaf/ashen.nvim" },
     { "folke/zen-mode.nvim", opts = {
         window = {
             width = 80,
