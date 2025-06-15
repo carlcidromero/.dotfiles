@@ -17,7 +17,18 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     { "bluz71/vim-moonfly-colors" },
-    { "ficcdaf/ashen.nvim" },
+    {
+        "sainnhe/sonokai",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- Optionally configure and load the colorscheme
+            -- directly inside the plugin declaration.
+            vim.g.sonokai_enable_italic = true
+            vim.g.sonokai_style = "shusia"
+            vim.cmd.colorscheme("sonokai")
+        end,
+    },
     { "folke/zen-mode.nvim", opts = {
         window = {
             width = 80,
